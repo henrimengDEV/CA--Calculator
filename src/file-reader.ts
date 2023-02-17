@@ -13,8 +13,7 @@ export const FileReader = (props: FileReaderProps): number[] => {
         const data = fs.readFileSync(path, {encoding: 'utf8', flag: 'r'});
         return data.split('\n').map(it => Number(it))
     } catch (e) {
-        logger.log('[log] file not found')
+        logger.log(`file not found at ${path}`)
         return []
     }
-
 }
