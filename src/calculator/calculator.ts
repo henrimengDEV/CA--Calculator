@@ -14,7 +14,7 @@ export const FactoryCalculator = (props: CalculatorProps) => {
     const {operator, logger} = props
 
     switch (operator) {
-        case '*':
+        case 'x':
             return new MultiplicationCalculator({logger})
         case '+':
         default: return new ImplCalculator({logger})

@@ -6,7 +6,7 @@ export const InputParser = (props: InputParserProps): [string, string, boolean] 
     const {args} = props
     const path = args[3]
     const operator = getOperator(args)
-    const hasLog = args[5] === undefined
+    const hasLog = args[5] === '-log'
 
     function getOperator(args: string[]): string {
         const arg = args[4]
@@ -14,9 +14,9 @@ export const InputParser = (props: InputParserProps): [string, string, boolean] 
             case "+":
                 console.log('[log] applying operation addition');
                 return '+';
-            case "*":
+            case "x":
                 console.log('[log] applying operation multiplication');
-                return '*';
+                return 'x';
             default:
                 console.log(`[log] operator unknown [${arg}] -> applying operation addition`);
                 return '+';

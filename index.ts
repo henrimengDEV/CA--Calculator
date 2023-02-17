@@ -3,6 +3,7 @@ import {FileReader} from "./src/file-reader";
 import {FactoryCalculator} from "./src/calculator/calculator";
 import {Logger} from "./src/logger";
 
+console.log(process.argv)
 
 const [path, operator, hasLog] = InputParser({args: process.argv})
 const logger: Logger = new Logger({option: hasLog})
